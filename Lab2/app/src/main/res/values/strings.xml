@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Lab2</string>
+    <string name="button_ok">OK</string>
+    <string name="radioButton_red">Червоний</string>
+    <string name="radioButton_blue">Блакитний</string>
+    <string name="radioButton_white">Білий</string>
+    <string name="radioButton_yellow">Жовтий</string>
+    <string name="radioButton_low">До 500 грн</string>
+    <string name="radioButton_middle">500-1000 грн</string>
+    <string name="radioButton_high">Від 1000 грн</string>
+    <string name="textView_title">Замовлення квітів</string>
 </resources>
+

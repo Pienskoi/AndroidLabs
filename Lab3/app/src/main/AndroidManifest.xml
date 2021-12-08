@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Lab3">
         <activity
+            android:name=".FileActivity"
+            android:exported="true" />
+        <activity
+            android:name=".DbActivity"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

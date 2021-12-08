@@ -9,4 +9,15 @@
     <string name="radioButton_middle">500-1000 грн</string>
     <string name="radioButton_high">Від 1000 грн</string>
     <string name="textView_title">Замовлення квітів</string>
+    <string name="button_openFile">Відкрити файл</string>
+    <string name="button_openDb">Відкрити БД</string>
+    <string name="textView_id">Id</string>
+    <string name="textView_name">Назва</string>
+    <string name="textView_color">Колір</string>
+    <string name="textView_price">Діапазон цін</string>
+    <string name="radioButton_file">Файл</string>
+    <string name="radioButton_db">База даних</string>
+    <string name="textView_store">Тип сховища</string>
+    <string name="textView_dbTitle">Вміст бази даних</string>
+    <string name="textView_fileTitle">Вміст файлу</string>
 </resources>

@@ -13,7 +13,7 @@ class FormFragment : Fragment() {
     private lateinit var mListener: OnFormSubmitListener
 
     interface OnFormSubmitListener {
-        fun onFormSubmitListener(orderInfo: String)
+        fun onFormSubmitListener(order: OrderModel)
     }
 
     override fun onCreateView(
@@ -38,21 +38,20 @@ class FormFragment : Fragment() {
 
     private fun showOrderInfo(view: View) {
         val editText: EditText = view.findViewById(R.id.editText)
-        val input = editText.text.toString()
+        val name = editText.text.toString()
         val colorRadioGroup: RadioGroup = view.findViewById(R.id.radioGroup_color)
         val checkedColorId = colorRadioGroup.checkedRadioButtonId
         val priceRadioGroup: RadioGroup = view.findViewById(R.id.radioGroup_price)
         val checkedPriceId = priceRadioGroup.checkedRadioButtonId
 
-        if (input.isEmpty() || checkedColorId == -1 || checkedPriceId == -1) {
+        if (name.isEmpty() || checkedColorId == -1 || checkedPriceId == -1) {
             AlertFragment().show(childFragmentManager, AlertFragment.TAG)
         } else {
-            var orderInfo = "Інформація щодо замовлення:\n$input"
             val checkedColorButton: RadioButton = colorRadioGroup.findViewById(checkedColorId)
-            orderInfo += "\nКолір: ${checkedColorButton.text}"
+            val checkedColor = checkedColorButton.text as String
             val checkedPriceButton: RadioButton = priceRadioGroup.findViewById(checkedPriceId)
-            orderInfo += "\nДіапазон цін: ${checkedPriceButton.text}"
-            mListener.onFormSubmitListener(orderInfo)
+            val checkedPrice = checkedPriceButton.text as String
+            mListener.onFormSubmitListener(OrderModel(name, checkedColor, checkedPrice))
         }
     }
 }
